@@ -1,5 +1,6 @@
 import React from 'react';
 import { Plus } from 'lucide-react';
+import AnimatedNumber from './AnimatedNumber';
 import { 
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer 
 } from 'recharts';
@@ -65,23 +66,47 @@ const ApiManagement = () => {
             <tbody className="text-sm text-slate-700">
               <tr className="border-b border-slate-50 last:border-0 hover:bg-slate-50/50">
                 <td className="py-4 font-medium text-slate-800">/v1/matches</td>
-                <td className="py-4 text-right">54.2K</td>
-                <td className="py-4 text-right"><span className="px-2 py-0.5 bg-red-50 text-red-600 rounded text-xs font-semibold">92</span></td>
+                <td className="py-4 text-right">
+                  <AnimatedNumber value={54.2} suffix="K" decimals={1} />
+                </td>
+                <td className="py-4 text-right">
+                  <span className="px-2 py-0.5 bg-red-50 text-red-600 rounded text-xs font-semibold">
+                    <AnimatedNumber value={92} />
+                  </span>
+                </td>
               </tr>
               <tr className="border-b border-slate-50 last:border-0 hover:bg-slate-50/50">
                 <td className="py-4 font-medium text-slate-800">/v1/standings</td>
-                <td className="py-4 text-right">31.8K</td>
-                <td className="py-4 text-right"><span className="px-2 py-0.5 bg-red-50 text-red-600 rounded text-xs font-semibold">44</span></td>
+                <td className="py-4 text-right">
+                  <AnimatedNumber value={31.8} suffix="K" decimals={1} />
+                </td>
+                <td className="py-4 text-right">
+                  <span className="px-2 py-0.5 bg-red-50 text-red-600 rounded text-xs font-semibold">
+                    <AnimatedNumber value={44} />
+                  </span>
+                </td>
               </tr>
               <tr className="border-b border-slate-50 last:border-0 hover:bg-slate-50/50">
                 <td className="py-4 font-medium text-slate-800">/v1/teams</td>
-                <td className="py-4 text-right">21.5K</td>
-                <td className="py-4 text-right"><span className="px-2 py-0.5 bg-red-50 text-red-600 rounded text-xs font-semibold">38</span></td>
+                <td className="py-4 text-right">
+                  <AnimatedNumber value={21.5} suffix="K" decimals={1} />
+                </td>
+                <td className="py-4 text-right">
+                  <span className="px-2 py-0.5 bg-red-50 text-red-600 rounded text-xs font-semibold">
+                    <AnimatedNumber value={38} />
+                  </span>
+                </td>
               </tr>
               <tr className="border-b border-slate-50 last:border-0 hover:bg-slate-50/50">
                 <td className="py-4 font-medium text-slate-800">/v1/players</td>
-                <td className="py-4 text-right">15.6K</td>
-                <td className="py-4 text-right"><span className="px-2 py-0.5 bg-slate-50 text-slate-600 rounded text-xs font-semibold">27</span></td>
+                <td className="py-4 text-right">
+                  <AnimatedNumber value={15.6} suffix="K" decimals={1} />
+                </td>
+                <td className="py-4 text-right">
+                  <span className="px-2 py-0.5 bg-slate-50 text-slate-600 rounded text-xs font-semibold">
+                    <AnimatedNumber value={27} />
+                  </span>
+                </td>
               </tr>
             </tbody>
           </table>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Plus } from 'lucide-react';
+import AnimatedNumber from './AnimatedNumber';
 
 const Subscriptions = () => {
   return (
@@ -14,22 +15,30 @@ const Subscriptions = () => {
       <div className="grid grid-cols-4 gap-6 mb-8">
         <div className="bg-white p-5 rounded-2xl border border-slate-200">
           <p className="text-sm font-medium text-slate-600 mb-2">Active Subscribers</p>
-          <p className="text-2xl font-bold text-slate-800 mb-1">2</p>
+          <p className="text-2xl font-bold text-slate-800 mb-1">
+            <AnimatedNumber value={2} />
+          </p>
           <p className="text-[11px] text-slate-400">Currently paying</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200">
           <p className="text-sm font-medium text-slate-600 mb-2">MRR</p>
-          <p className="text-2xl font-bold text-slate-800 mb-1">$28</p>
+          <p className="text-2xl font-bold text-slate-800 mb-1">
+            <AnimatedNumber value={28} prefix="$" />
+          </p>
           <p className="text-[11px] text-slate-400">Monthly recurring revenue</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200">
           <p className="text-sm font-medium text-slate-600 mb-2">Churn Rate</p>
-          <p className="text-2xl font-bold text-slate-800 mb-1">0</p>
+          <p className="text-2xl font-bold text-slate-800 mb-1">
+            <AnimatedNumber value={0} />
+          </p>
           <p className="text-[11px] text-slate-400">Canceled vs total</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200">
           <p className="text-sm font-medium text-slate-600 mb-2">Plans</p>
-          <p className="text-2xl font-bold text-slate-800 mb-1">3</p>
+          <p className="text-2xl font-bold text-slate-800 mb-1">
+            <AnimatedNumber value={3} />
+          </p>
           <p className="text-[11px] text-slate-400">Available plans</p>
         </div>
       </div>
@@ -66,7 +75,9 @@ const Subscriptions = () => {
                   <p className="text-[10px] text-slate-500 leading-tight">Role: league_operator • Scope: league</p>
                   <p className="text-[10px] text-slate-500 leading-tight">Modules: 3 • API: 120 rpm / 5000 day</p>
                 </td>
-                <td className="py-4 font-medium">$29</td>
+                <td className="py-4 font-medium">
+                  <AnimatedNumber value={29} prefix="$" />
+                </td>
                 <td className="py-4"><span className="text-xs text-blue-600 font-medium">PayPal</span></td>
                 <td className="py-4">
                   <span className="px-2 py-1 bg-green-50 text-green-600 border border-green-200 rounded text-xs font-medium">Active</span>
@@ -84,7 +95,9 @@ const Subscriptions = () => {
                   <p className="text-[10px] text-slate-500 leading-tight">Role: viewer • Scope: platform</p>
                   <p className="text-[10px] text-slate-500 leading-tight">Modules: 1 • API: 30 rpm / 300 day</p>
                 </td>
-                <td className="py-4 font-medium">$9</td>
+                <td className="py-4 font-medium">
+                  <AnimatedNumber value={9} prefix="$" />
+                </td>
                 <td className="py-4"><span className="text-xs text-indigo-600 font-medium">Stripe</span></td>
                 <td className="py-4">
                   <span className="px-2 py-1 bg-green-50 text-green-600 border border-green-200 rounded text-xs font-medium">Active</span>
@@ -102,7 +115,9 @@ const Subscriptions = () => {
                   <p className="text-[10px] text-slate-500 leading-tight">Role: data_contributor • Scope: team</p>
                   <p className="text-[10px] text-slate-500 leading-tight">Modules: 2 • API: 60 rpm / 1000 day</p>
                 </td>
-                <td className="py-4 font-medium">$19</td>
+                <td className="py-4 font-medium">
+                  <AnimatedNumber value={19} prefix="$" />
+                </td>
                 <td className="py-4"><span className="text-xs text-indigo-600 font-medium">Stripe</span></td>
                 <td className="py-4">
                   <span className="px-2 py-1 bg-green-50 text-green-600 border border-green-200 rounded text-xs font-medium">Active</span>

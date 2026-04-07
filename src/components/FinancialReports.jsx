@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import AnimatedNumber from './AnimatedNumber';
 import { 
   PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer 
 } from 'recharts';
@@ -38,22 +39,30 @@ const FinancialReports = () => {
       <div className="grid grid-cols-4 gap-6 mb-8">
         <div className="bg-white p-5 rounded-2xl border border-slate-200">
           <p className="text-sm font-medium text-slate-600 mb-2">Gross Revenue</p>
-          <p className="text-2xl font-bold text-slate-800 mb-1">$392,321</p>
+          <p className="text-2xl font-bold text-slate-800 mb-1">
+            <AnimatedNumber value={392321} prefix="$" />
+          </p>
           <p className="text-[11px] text-slate-400">Before fees/refunds</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200">
           <p className="text-sm font-medium text-slate-600 mb-2">Net Revenue</p>
-          <p className="text-2xl font-bold text-slate-800 mb-1">$371,146</p>
+          <p className="text-2xl font-bold text-slate-800 mb-1">
+            <AnimatedNumber value={371146} prefix="$" />
+          </p>
           <p className="text-[11px] text-slate-400">After fees/refunds</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200">
           <p className="text-sm font-medium text-slate-600 mb-2">Fees</p>
-          <p className="text-2xl font-bold text-slate-800 mb-1">$15,469</p>
+          <p className="text-2xl font-bold text-slate-800 mb-1">
+            <AnimatedNumber value={15469} prefix="$" />
+          </p>
           <p className="text-[11px] text-slate-400">Estimated processing fees</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200">
           <p className="text-sm font-medium text-slate-600 mb-2">Refunds</p>
-          <p className="text-2xl font-bold text-slate-800 mb-1">$5,705</p>
+          <p className="text-2xl font-bold text-slate-800 mb-1">
+            <AnimatedNumber value={5705} prefix="$" />
+          </p>
           <p className="text-[11px] text-slate-400">Effective take rate: 5.4%</p>
         </div>
       </div>

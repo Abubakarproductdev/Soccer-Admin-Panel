@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import AnimatedNumber from './AnimatedNumber';
 import {
   LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 } from 'recharts';
@@ -37,7 +38,9 @@ const engagementData = [
 const StatCard = ({ title, value, subtitle }) => (
   <div className="bg-white p-5 rounded-2xl border border-slate-200 flex flex-col justify-between h-[120px]">
     <h3 className="text-sm font-medium text-slate-600">{title}</h3>
-    <p className="text-2xl font-bold text-slate-800 my-1">{value}</p>
+    <p className="text-2xl font-bold text-slate-800 my-1">
+      <AnimatedNumber value={value} />
+    </p>
     <p className="text-xs text-slate-400">{subtitle}</p>
   </div>
 );
@@ -46,9 +49,13 @@ const ProgressCard = ({ title, value, percentage, bgClass }) => (
   <div className="bg-white p-5 rounded-2xl border border-slate-200">
     <div className="flex justify-between items-start mb-4">
       <h3 className="text-sm font-medium text-slate-600">{title}</h3>
-      <span className="text-xs font-semibold text-slate-500">{percentage}%</span>
+      <span className="text-xs font-semibold text-slate-500">
+        <AnimatedNumber value={percentage} suffix="%" />
+      </span>
     </div>
-    <p className="text-2xl font-bold text-slate-800 mb-3">{value}</p>
+    <p className="text-2xl font-bold text-slate-800 mb-3">
+      <AnimatedNumber value={value} />
+    </p>
     <div className="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
       <div className={`h-full ${bgClass} rounded-full`} style={{ width: `${percentage}%` }}></div>
     </div>
@@ -164,17 +171,23 @@ const Dashboard = () => {
           <div className="grid grid-cols-3 gap-4">
             <div className="border border-slate-100 bg-slate-50/50 p-4 rounded-xl">
               <p className="text-xs font-medium text-slate-500 mb-2">Uptime</p>
-              <p className="text-2xl font-bold text-slate-800 mb-1">99.95%</p>
+              <p className="text-2xl font-bold text-slate-800 mb-1">
+                <AnimatedNumber value={99.95} suffix="%" decimals={2} />
+              </p>
               <p className="text-[10px] text-slate-400">Last 30 days</p>
             </div>
             <div className="border border-slate-100 bg-slate-50/50 p-4 rounded-xl">
               <p className="text-xs font-medium text-slate-500 mb-2">Latency (p95)</p>
-              <p className="text-2xl font-bold text-slate-800 mb-1">210ms</p>
+              <p className="text-2xl font-bold text-slate-800 mb-1">
+                <AnimatedNumber value={210} suffix="ms" />
+              </p>
               <p className="text-[10px] text-slate-400">API response time</p>
             </div>
             <div className="border border-slate-100 bg-slate-50/50 p-4 rounded-xl">
               <p className="text-xs font-medium text-slate-500 mb-2">Error Rate</p>
-              <p className="text-2xl font-bold text-slate-800 mb-1">0.12%</p>
+              <p className="text-2xl font-bold text-slate-800 mb-1">
+                <AnimatedNumber value={0.12} suffix="%" decimals={2} />
+              </p>
               <p className="text-[10px] text-slate-400">Requests failing</p>
             </div>
           </div>
