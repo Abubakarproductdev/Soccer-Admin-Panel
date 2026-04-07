@@ -29,17 +29,7 @@ const Sidebar = ({ currentView, setCurrentView }) => {
     <aside className="w-[280px] h-screen bg-white border-r border-slate-200 flex flex-col fixed left-0 top-0 overflow-y-auto">
       {/* Logo Area */}
       <div className="p-6">
-        <div className="bg-[#1b2649] text-white p-3 rounded-lg flex flex-col justify-center border-b-4 border-[#e63946] mb-1">
-            <div className="flex items-center gap-2">
-                <div className="bg-[#e63946] rounded-full p-1 flex justify-center items-center w-8 h-8">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white w-5 h-5"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-                </div>
-                <span className="font-bold text-3xl tracking-wider uppercase italic">WSL</span>
-            </div>
-        </div>
-        <div className="text-[#1b2649] text-[10px] font-black uppercase text-center tracking-tighter w-full">
-            WORLDSOCCERLEAGUES.COM
-        </div>
+        <img src="/logo.png" alt="Logo" />
       </div>
 
       {/* Navigation */}
